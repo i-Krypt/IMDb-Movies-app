@@ -20,7 +20,6 @@ export class ComingSoonComponent implements OnInit {
   displayComingSoonMovies() {
     this.comingSoon.getComingSoonMovies().subscribe(resp => {
       this.comingSoonData = resp.items;
-      console.log('here', resp.items)
     }) 
   }
 
