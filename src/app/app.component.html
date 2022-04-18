@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<!-- temp -->
+<nav class="navbar navbar-light sticky-top bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Movies</a>
+    <form class="d-flex input-group w-auto">
+      <input
+        type="search"
+        class="form-control rounded"
+        placeholder="Search"
+        aria-label="Search"
+        aria-describedby="search-addon"
+      />
+      <span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search"></i>
+      </span>
+    </form>
+  </div>
+</nav>
+
+<section class="px-6 md:px-24 mt-4">
+  <router-outlet></router-outlet>
+</section>
+
+<!-- stick bottom nav -->
+<nav class="navbar fixed-bottom border-top navbar-light bg-light mt-3">
+  <div class="container-xl text-center">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="nav-item nav-link"><i class="fa fa-film"></i><span> <br> Movies</span></a>
+			<a [routerLink]="['/']" class="nav-item nav-link"><i class="fa fa-television"></i><span> <br> Tv</span></a>
+			<a [routerLink]="['/']"  class="nav-item nav-link"><i class="fa fa-user"></i><span> <br> Profile</span></a>
+  </div>
+</nav>
