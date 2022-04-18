@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InTheatersService } from '../../services/in-theaters-service/in-theaters.service';
+import { InTheaters } from '../../interfaces/inTheaters';
 
 @Component({
   selector: 'app-in-theaters',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InTheatersComponent implements OnInit {
 
-  constructor() { }
+  inTheatersData: InTheaters[] = [];
+
+  constructor(private inTheaters:InTheatersService) { }
 
   ngOnInit(): void {
+    this.getInTheaters();
   }
+
+  getInTheaters() {
+    this.inTheaters.getMoviesInTheaters().subscribe(resp => {
+      this.inTheatersData = resp.items;
+      console.log('theater', resp.items)
+    }) 
+  }
+ 
 
 }
