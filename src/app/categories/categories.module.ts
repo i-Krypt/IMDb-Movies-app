@@ -8,6 +8,8 @@ import { MostPopularTvsComponent } from './components/most-popular-tvs/most-popu
 import { MostPopularMoviesComponent } from './components/most-popular-movies/most-popular-movies.component';
 import { Top250MoviesComponent } from './components/top250-movies/top250-movies.component';
 import { Top250TvsComponent } from './components/top250-tvs/top250-tvs.component';
+import { ViewAllComponent } from './components/view-all/view-all.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { Top250TvsComponent } from './components/top250-tvs/top250-tvs.component
     MostPopularTvsComponent,
     MostPopularMoviesComponent,
     Top250MoviesComponent,
-    Top250TvsComponent
+    Top250TvsComponent,
+    ViewAllComponent,
+    MovieDetailsComponent
   ],
   imports: [
     CommonModule,
