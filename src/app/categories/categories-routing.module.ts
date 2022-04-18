@@ -6,7 +6,7 @@ import { ViewAllComponent } from './components/view-all/view-all.component';
 
 const routes: Routes = [
   { path: '',  component: ComingSoonComponent },
-  { path: 'movies/:category',  component: ViewAllComponent },
+  { path: 'category/:category',  component: ViewAllComponent },
 ];
 
 @NgModule({
