@@ -1,1 +1,19 @@
-<p>top250-tvs works!</p>
+<div class="container">
+  <div class="d-flex flex-row justify-content-between">
+      <h5>Top 250 Tv Shows</h5>
+      <a [routerLink]="['/movies']"  >See all</a>
+  </div>
+   
+  <ul class="flex w-full overflow-x-auto hide-scroll-bar space-x-4 mt-4">
+    <li *ngFor="let television of topData |slice:0:3" class="flex-none">
+      <div class="card" style="width: 18rem;">
+        <img src="{{television.image}}" class="card-img-top" alt="Sunset Over the Sea"/>
+        <div class="card-body">
+          <p class="card-text">{{television.title}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
+

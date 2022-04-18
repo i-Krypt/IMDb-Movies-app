@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Top250TvsService } from '../../services/top250-tvs-service/top250-tvs.service';
+import { I250Tvs } from '../../interfaces/top250Tvs';
 
 @Component({
   selector: 'app-top250-tvs',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Top250TvsComponent implements OnInit {
 
-  constructor() { }
+  topData: I250Tvs[] = []
+
+  constructor(private top250Tvs:Top250TvsService) { }
 
   ngOnInit(): void {
+    this.displayTop250Tvs();
+  }
+
+  displayTop250Tvs() {
+    this.top250Tvs.getTop250Tvs().subscribe(resp => {
+      this.topData = resp.items;
+      console.log('hapa', resp.items)
+    }) 
   }
 
 }

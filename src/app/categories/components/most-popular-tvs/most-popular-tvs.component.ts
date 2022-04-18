@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PopularTvsService } from '../../services/popular-tvs-service/popular-tvs.service';
+import { ITvs } from '../../interfaces/popularTvs';
 
 @Component({
   selector: 'app-most-popular-tvs',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MostPopularTvsComponent implements OnInit {
 
-  constructor() { }
+  tvsData: ITvs[] = [];
+
+  constructor(private popularTvs:PopularTvsService) { }
 
   ngOnInit(): void {
+    this.getTvs();
+  }
+
+  getTvs() {
+    this.popularTvs.getPopularTvs().subscribe(resp => {
+      this.tvsData = resp.items;
+      console.log('here', resp.items)
+    }) 
   }
 
 }
