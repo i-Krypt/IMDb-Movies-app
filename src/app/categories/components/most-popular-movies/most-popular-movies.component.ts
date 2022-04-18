@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PopularMoviesService } from '../../services/popular-movies-service/popular-movies.service';
+import { IpopularMovies } from '../../interfaces/popularMovies';
 
 @Component({
   selector: 'app-most-popular-movies',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MostPopularMoviesComponent implements OnInit {
 
-  constructor() { }
+  popularMoviesData: IpopularMovies[] = [];
+
+  constructor(private popularMovies:PopularMoviesService) { }
 
   ngOnInit(): void {
+    this.getPopularMovies();
+  }
+
+  getPopularMovies() {
+    this.popularMovies.getPopularMovies().subscribe(resp => {
+      this.popularMoviesData = resp.items;
+      console.log('here', resp.items)
+    }) 
   }
 
 }

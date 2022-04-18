@@ -1,1 +1,21 @@
-<p>most-popular-movies works!</p>
+<div class="container">
+  <div class="d-flex flex-row justify-content-between">
+      <h5>Most Popular Movies</h5>
+      <a [routerLink]="['/movies', 'MostPopularMovies']"  >See all</a>
+  </div>
+   
+  <ul class="flex w-full overflow-x-auto hide-scroll-bar space-x-4 mt-4">
+    <li *ngFor="let popular of popularMoviesData  |slice:0:3" class="flex-none">
+      <div class="card" style="width: 18rem;">
+        <img src="{{popular.image}}" class="card-img-top" alt="Sunset Over the Sea"/>
+        <div class="card-body">
+          <p class="card-text">{{popular.title}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
+
+
+
