@@ -10,7 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class MovieDetailsComponent implements OnInit {
 
   id: any;
-  detailsData = [];
+  detailsData: any;
 
   constructor(private route: ActivatedRoute,
     private details: MovieCategoriesService) { }
@@ -25,7 +25,6 @@ export class MovieDetailsComponent implements OnInit {
       this.id = params.get('id');
       this.details.getDetails(this.id).subscribe(resp => {
         this.detailsData = resp.items;
-        console.log('wahh', resp.items);
       });
     });
   }
