@@ -10,8 +10,9 @@ export class MovieCategoriesService {
   constructor(private http: HttpClient) {}
 
   getCategories(category: string): Observable<any> {
+    console.log('service', category)
     return this.http
-      .get(`https://imdb-api.com/en/API/${category}/k_1j14rikx`)
+      .get(`https://imdb-api.com/en/API/${category}/k_0x89nowz`)
       .pipe(
         map((response) => response),
         catchError((e: any) => {
@@ -22,7 +23,7 @@ export class MovieCategoriesService {
 
   getDetails(id: string): Observable<any> {
     return this.http
-      .get(`https://imdb-api.com/en/API/${id}/k_1j14rikx`)
+      .get(`https://imdb-api.com/en/API/Title/k_0x89nowz/${id}`)
       .pipe(
         map((response) => response),
         catchError((e: any) => {

@@ -1,17 +1,42 @@
 <div class="container">
-    <div class="d-flex flex-row justify-content-between">
-        <h5>Movies</h5>
+  <div class="d-flex flex-row justify-content-between">
+    <h5>Movies</h5>
+  </div>
+
+
+  <!-- <div class="row d-flex flex-wrap justify-content-center mt-4 gap-4">
+    <div *ngFor="let popular of categoriesData" class="card" style="width: 18rem;">
+      <img src={{popular.image}} class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">{{popular?.title}}</p>
+      </div>
     </div>
-     
-    <ul class="flex w-full overflow-x-auto hide-scroll-bar space-x-4 mt-4">
-      <li *ngFor="let catalogue of categoriesData" class="flex-none">
+  </div> -->
+
+  <div *ngFor="let popular of categoriesData" class="grid">
+    <div class="g-col-6 g-col-md-4 d-flex flex-wrap justify-content-center mt-4 ">
+      <a [routerLink]="['/movie-details', 'id']">
         <div class="card" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="Sunset Over the Sea"/>
+          <img src="{{popular?.image}}" class="card-img-top" alt="movies" />
           <div class="card-body">
-            <p class="card-text"></p>
+            <p class="card-text">{{popular?.title}}</p>
           </div>
         </div>
-      </li>
-    </ul>
-  
+      </a>
+    </div>
   </div>
+
+  
+
+  <!-- <ul class="flex w-full overflow-x-auto hide-scroll-bar space-x-4 mt-4">
+    <li *ngFor="let popular of categoriesData" class="flex-none">
+      <div class="card" style="width: 18rem;">
+        <img src="{{popular?.image}}" class="card-img-top" alt="Sunset Over the Sea"/>
+        <div class="card-body">
+          <p class="card-text">{{popular?.title}}</p>
+        </div>
+      </div>
+    </li>
+  </ul> -->
+
+</div>

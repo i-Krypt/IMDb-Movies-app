@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { MovieCategoriesService } from '../../services/movie-categories/movie-categories.service';
+import { ITvs } from '../../interfaces/popularTvs';
 
 @Component({
   selector: 'app-view-all',
@@ -9,7 +10,8 @@ import { MovieCategoriesService } from '../../services/movie-categories/movie-ca
 })
 export class ViewAllComponent implements OnInit {
   category: any;
-  categoriesData = [];
+  // categoriesData:ITvs[] = [];
+  categoriesData: any
 
   constructor(
     private route: ActivatedRoute,
@@ -24,9 +26,10 @@ export class ViewAllComponent implements OnInit {
   getCatalogue() {
     this.route.paramMap.subscribe((params) => {
       this.category = params.get('category');
+      console.log('anzia', this.category);
       this.categories.getCategories(this.category).subscribe(resp => {
-        this.categoriesData = resp.items;
-        console.log('wahh', resp.items);
+        this.categoriesData = resp['items'];
+        console.log('wahh', resp);
       });
     });
   }
