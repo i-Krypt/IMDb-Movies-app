@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="d-flex flex-row justify-content-between">
+    <h5 class="font-mono">Coming Soon</h5>
+  </div>
+
+  <ul class="flex w-full overflow-x-auto hide-scroll-bar space-x-4 mt-4">
+    <li *ngFor="let soon of comingSoonData |slice:0:3" class="flex-none">
+      <div class="card" style="width: 18rem;">
+        <img src="{{soon.image}}" class="card-img-top" alt="Sunset Over the Sea" />
+        <div class="card-body">
+          <p class="card-text">{{soon.title}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
+
+
+<!-- loading other components -->
+<div class="mt-3">
+  <app-in-theaters></app-in-theaters>
+</div>
+
+<div class="mt-3">
+  <app-most-popular-movies></app-most-popular-movies>
+</div>
+
+<div class="mt-3">
+  <app-most-popular-tvs></app-most-popular-tvs>
+</div>
+
+<div class="mt-3">
+  <app-top250-movies></app-top250-movies>
+</div>
+
+<div class="mt-3" style="margin-bottom: 5rem;">
+  <app-top250-tvs></app-top250-tvs>
+</div>

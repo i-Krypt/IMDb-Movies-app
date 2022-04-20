@@ -1,0 +1,40 @@
+<div class="card mb-3" *ngFor="let deets of detailsData">
+  <img src="{{deets.image}}" class="card-img-top" alt="Wild Landscape"/>
+  <div class="card-img-overlay d-flex justify-content-end">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">
+      {{deets.title}}
+    </p>
+    <p class="card-text">Last updated 3 mins ago</p>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">
+      {{deets.plot}}
+    </p>
+    <p class="card-text">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </p>
+  </div>
+</div>
+
+
+
+<!-- <div class="container">
+    <div class="d-flex flex-row justify-content-between">
+        <h5>Most Popular Tv Shows</h5>
+        <a [routerLink]="['/movies']"  >See all</a>
+    </div>
+     
+    <ul class="flex w-full overflow-x-auto hide-scroll-bar space-x-4 mt-4">
+      <li *ngFor="let tvs of tvsData  |slice:0:3" class="flex-none">
+        <div class="card" style="width: 18rem;">
+          <img src="{{tvs.image}}" class="card-img-top" alt="Sunset Over the Sea"/>
+          <div class="card-body">
+            <p class="card-text">{{tvs.title}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  
+  </div> -->
