@@ -1,9 +1,9 @@
 <div class="container">
   <div class="d-flex flex-row justify-content-between">
-    <h5>Coming Soon</h5>
+    <h5 class="font-mono">Coming Soon</h5>
   </div>
 
-  <ul class="flex w-full overflow-x-auto hide-scroll-bar h-48 space-x-4 mt-4">
+  <ul class="flex w-full overflow-x-auto hide-scroll-bar space-x-4 mt-4">
     <li *ngFor="let soon of comingSoonData |slice:0:3" class="flex-none">
       <div class="card" style="width: 18rem;">
         <img src="{{soon.image}}" class="card-img-top" alt="Sunset Over the Sea" />
@@ -16,19 +16,6 @@
 
 </div>
 
-
-<!-- <div class="container">
-  <div class="d-flex flex-row justify-content-between">
-    <h5>Coming Soon</h5>
-  </div>
-
-  <div class="row d-flex flex-wrap justify-content-center">
-    <div *ngFor="let soon of comingSoonData |slice:0:3" class="card" style="width: 18rem;">
-      <img src={{soon.image}} class="card-img-top" alt="...">
-    </div>
-  </div>
-
-</div> -->
 
 <!-- loading other components -->
 <div class="mt-3">

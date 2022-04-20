@@ -26,10 +26,8 @@ export class ViewAllComponent implements OnInit {
   getCatalogue() {
     this.route.paramMap.subscribe((params) => {
       this.category = params.get('category');
-      console.log('anzia', this.category);
       this.categories.getCategories(this.category).subscribe(resp => {
         this.categoriesData = resp['items'];
-        console.log('wahh', resp);
       });
     });
   }

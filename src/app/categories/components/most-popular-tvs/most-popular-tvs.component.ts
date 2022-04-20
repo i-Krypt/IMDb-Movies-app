@@ -20,7 +20,6 @@ export class MostPopularTvsComponent implements OnInit {
   getTvs() {
     this.popularTvs.getPopularTvs().subscribe(resp => {
       this.tvsData = resp.items;
-      console.log('here', resp.items)
     }) 
   }
 

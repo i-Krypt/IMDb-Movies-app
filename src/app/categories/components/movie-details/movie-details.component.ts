@@ -5,28 +5,27 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css']
+  styleUrls: ['./movie-details.component.css'],
 })
 export class MovieDetailsComponent implements OnInit {
-
   id: any;
   detailsData: any;
 
-  constructor(private route: ActivatedRoute,
-    private details: MovieCategoriesService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private details: MovieCategoriesService
+  ) {}
 
   ngOnInit(): void {
-    this.getMovieDetails();
+    this.getDescription();
   }
 
-
-  getMovieDetails() {
+  getDescription() {
     this.route.paramMap.subscribe((params) => {
       this.id = params.get('id');
-      this.details.getDetails(this.id).subscribe(resp => {
-        this.detailsData = resp.items;
+      this.details.getMovieDetails(this.id).subscribe(resp => {
+        this.detailsData = resp['items'];
       });
     });
   }
-
 }

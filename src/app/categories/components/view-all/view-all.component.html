@@ -3,17 +3,23 @@
     <h5>Movies</h5>
   </div>
 
-
-  <!-- <div class="row d-flex flex-wrap justify-content-center mt-4 gap-4">
+  <div class="row d-flex flex-wrap justify-content-center mt-4 gap-4">
     <div *ngFor="let popular of categoriesData" class="card" style="width: 18rem;">
-      <img src={{popular.image}} class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">{{popular?.title}}</p>
-      </div>
+      <a [routerLink]="['/movie-details', 'id']">
+        <div>
+          <img src={{popular.image}} class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{popular?.title}}</p>
+          </div>
+        </div>
+      </a>
     </div>
-  </div> -->
+  </div>
 
-  <div *ngFor="let popular of categoriesData" class="grid">
+</div>
+
+
+  <!-- <div *ngFor="let popular of categoriesData" class="grid">
     <div class="g-col-6 g-col-md-4 d-flex flex-wrap justify-content-center mt-4 ">
       <a [routerLink]="['/movie-details', 'id']">
         <div class="card" style="width: 18rem;">
@@ -24,7 +30,7 @@
         </div>
       </a>
     </div>
-  </div>
+  </div> -->
 
   
 
@@ -38,5 +44,3 @@
       </div>
     </li>
   </ul> -->
-
-</div>

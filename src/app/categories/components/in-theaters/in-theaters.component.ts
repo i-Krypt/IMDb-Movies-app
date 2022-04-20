@@ -20,7 +20,6 @@ export class InTheatersComponent implements OnInit {
   getInTheaters() {
     this.inTheaters.getMoviesInTheaters().subscribe(resp => {
       this.inTheatersData = resp.items;
-      console.log('theater', resp.items)
     }) 
   }
  

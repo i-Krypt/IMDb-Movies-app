@@ -20,7 +20,6 @@ export class Top250MoviesComponent implements OnInit {
   displayTop250Movies() {
     this.top250Movies.getTop250Movies().subscribe(resp => {
       this.top250MoviesData = resp.items;
-      console.log('tafuta', resp.items)
     }) 
   }
 

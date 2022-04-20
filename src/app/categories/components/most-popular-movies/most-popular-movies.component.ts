@@ -20,7 +20,6 @@ export class MostPopularMoviesComponent implements OnInit {
   getPopularMovies() {
     this.popularMovies.getPopularMovies().subscribe(resp => {
       this.popularMoviesData = resp.items;
-      console.log('here', resp.items)
     }) 
   }
 
