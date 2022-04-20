@@ -13,6 +13,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Use your IMDB Account and replace the existing apis in the services due to usage limit.
 
 ## Running unit tests
 
