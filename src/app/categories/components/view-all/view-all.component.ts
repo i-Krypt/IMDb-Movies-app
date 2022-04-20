@@ -34,12 +34,3 @@ export class ViewAllComponent implements OnInit {
 }
 
 
-  // fetchCatalogue() {
-  //   this.route.paramMap.subscribe((params) => {
-  //     this.categories.getCategories(this.category).subscribe(resp => {
-  //       this.movieList =resp.items;
-  //       console.log('catalog', resp.items);
-  //     })
-  //   })
- 
-  // }
