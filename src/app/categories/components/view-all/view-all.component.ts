@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { MovieCategoriesService } from '../../services/movie-categories/movie-categories.service';
+import { ImdbApiService } from '../../services/imdb-api services/imdb-api.service';
 import { ITvs } from '../../interfaces/popularTvs';
 
 @Component({
@@ -15,7 +15,7 @@ export class ViewAllComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private categories: MovieCategoriesService
+    private categories: ImdbApiService
   ) {}
 
   ngOnInit(): void {

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PopularTvsService } from './popular-tvs.service';
+import { ImdbApiService } from './imdb-api.service';
 
-describe('PopularTvsService', () => {
-  let service: PopularTvsService;
+describe('ImdbApiService', () => {
+  let service: ImdbApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PopularTvsService);
+    service = TestBed.inject(ImdbApiService);
   });
 
   it('should be created', () => {

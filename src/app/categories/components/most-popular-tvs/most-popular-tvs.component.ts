@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PopularTvsService } from '../../services/popular-tvs-service/popular-tvs.service';
+import { ImdbApiService } from '../../services/imdb-api services/imdb-api.service';
 import { ITvs } from '../../interfaces/popularTvs';
 
 @Component({
@@ -11,7 +11,7 @@ export class MostPopularTvsComponent implements OnInit {
 
   tvsData: ITvs[] = [];
 
-  constructor(private popularTvs:PopularTvsService) { }
+  constructor(private popularTvs:ImdbApiService) { }
 
   ngOnInit(): void {
     this.getTvs();

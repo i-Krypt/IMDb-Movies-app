@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InTheatersService } from '../../services/in-theaters-service/in-theaters.service';
+import { ImdbApiService } from '../../services/imdb-api services/imdb-api.service';
 import { InTheaters } from '../../interfaces/inTheaters';
 
 @Component({
@@ -11,7 +11,7 @@ export class InTheatersComponent implements OnInit {
 
   inTheatersData: InTheaters[] = [];
 
-  constructor(private inTheaters:InTheatersService) { }
+  constructor(private inTheaters:ImdbApiService) { }
 
   ngOnInit(): void {
     this.getInTheaters();
