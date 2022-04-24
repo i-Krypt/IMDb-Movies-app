@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ComingSoonService } from '../../services/coming-soon/coming-soon.service';
 import { IComingSoon } from '../../interfaces/comingSoon';
+import { ImdbApiService } from '../../services/imdb-api services/imdb-api.service';
 
 @Component({
   selector: 'app-coming-soon',
@@ -11,7 +11,7 @@ export class ComingSoonComponent implements OnInit {
 
   comingSoonData: IComingSoon[] = [];
 
-  constructor(private comingSoon:ComingSoonService) { }
+  constructor(private comingSoon:ImdbApiService) { }
 
   ngOnInit(): void {
     this.displayComingSoonMovies();

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieCategoriesService } from '../../services/movie-categories/movie-categories.service';
+import { ImdbApiService } from '../../services/imdb-api services/imdb-api.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ export class MovieDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private details: MovieCategoriesService
+    private details: ImdbApiService
   ) {}
 
   ngOnInit(): void {

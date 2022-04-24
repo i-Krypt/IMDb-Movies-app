@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PopularMoviesService } from '../../services/popular-movies-service/popular-movies.service';
+import { ImdbApiService } from '../../services/imdb-api services/imdb-api.service';
 import { IpopularMovies } from '../../interfaces/popularMovies';
 
 @Component({
@@ -11,7 +11,7 @@ export class MostPopularMoviesComponent implements OnInit {
 
   popularMoviesData: IpopularMovies[] = [];
 
-  constructor(private popularMovies:PopularMoviesService) { }
+  constructor(private popularMovies:ImdbApiService) { }
 
   ngOnInit(): void {
     this.getPopularMovies();

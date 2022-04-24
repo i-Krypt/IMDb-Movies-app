@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Top250MoviesService } from '../../services/top250-movies-service/top250-movies.service';
+import { ImdbApiService } from '../../services/imdb-api services/imdb-api.service';
 import { ITop250movies } from '../../interfaces/top250Movies';
 
 @Component({
@@ -11,7 +11,7 @@ export class Top250MoviesComponent implements OnInit {
 
   top250MoviesData: ITop250movies[] = [];
 
-  constructor(private top250Movies:Top250MoviesService) { }
+  constructor(private top250Movies:ImdbApiService) { }
 
   ngOnInit(): void {
     this.displayTop250Movies();
